@@ -3,12 +3,13 @@ import json
 from datetime import datetime
 from typing import List, Dict, Optional
 
+import sqlite3
+
 try:
     import psycopg2
     import psycopg2.extras
     USE_POSTGRES = True
 except ImportError:
-    import sqlite3
     USE_POSTGRES = False
 
 class DatabaseManager:
